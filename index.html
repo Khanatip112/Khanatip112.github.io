@@ -20,7 +20,7 @@
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.9);
-            padding: 15px 20px;
+            padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             transition: background 0.3s;
@@ -86,6 +86,7 @@
             border-radius: 8px;
             padding: 20px;
             margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .portfolio {
             display: grid;
@@ -99,6 +100,9 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
         }
         .portfolio-item img {
             width: 100%;
@@ -143,11 +147,11 @@
 
 <section id="about" class="about">
     <h2>เกี่ยวกับฉัน</h2>
-    <p>ชื่อจริง: [ชื่อของคุณ]</p>
-    <p>ที่อยู่: [ที่อยู่ของคุณ]</p>
-    <p>สถานศึกษา: [สถานศึกษาของคุณ]</p>
-    <p>คอนเทค: [เบอร์โทรหรืออีเมล]</p>
-    <p>สกิล: [ระบุสกิลของคุณ]</p>
+    <p><strong>ชื่อจริง:</strong> [ชื่อของคุณ]</p>
+    <p><strong>ที่อยู่:</strong> [ที่อยู่ของคุณ]</p>
+    <p><strong>สถานศึกษา:</strong> [สถานศึกษาของคุณ]</p>
+    <p><strong>คอนเทค:</strong> [เบอร์โทรหรืออีเมล]</p>
+    <p><strong>สกิล:</strong> [ระบุสกิลของคุณ]</p>
     <video width="100%" controls>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
         เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
