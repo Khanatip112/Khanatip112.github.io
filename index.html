@@ -35,12 +35,19 @@
         }
         .hero h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
         section {
             padding: 40px 20px;
             max-width: 900px;
             margin: auto;
+        }
+        .about {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .portfolio {
             display: grid;
@@ -64,12 +71,9 @@
             margin: 0;
             font-size: 1.2rem;
         }
-        .about, .contact {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .portfolio-item p {
+            padding: 0 15px 15px;
+            text-align: center;
         }
         footer {
             text-align: center;
@@ -95,6 +99,11 @@
         input[type="submit"]:hover {
             background: #555;
         }
+        .subheading {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -102,8 +111,8 @@
 <header>
     <h1>Portfolio ของฉัน</h1>
     <nav>
-        <a href="#portfolio">ผลงาน</a>
         <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#portfolio">ผลงาน</a>
         <a href="#contact">ติดต่อ</a>
     </nav>
 </header>
@@ -112,31 +121,40 @@
     <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
 </div>
 
+<section id="about" class="about">
+    <h2>เกี่ยวกับฉัน</h2>
+    <div class="subheading">ข้อมูลส่วนตัว</div>
+    <p>ชื่อจริง: [ชื่อของคุณ]</p>
+    <p>ที่อยู่: [ที่อยู่ของคุณ]</p>
+    <p>สถานศึกษา: [สถานศึกษาของคุณ]</p>
+    <p>คอนเทค: [เบอร์โทรหรืออีเมล]</p>
+    <p>สกิล: [ระบุสกิลของคุณ]</p>
+</section>
+
 <section id="portfolio">
     <h2>ผลงานของฉัน</h2>
     <div class="portfolio">
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/300" alt="ผลงาน 1">
             <h3>ชื่อผลงาน 1</h3>
+            <p>คำอธิบายผลงาน 1: [รายละเอียดเพิ่มเติม]</p>
         </div>
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/300" alt="ผลงาน 2">
             <h3>ชื่อผลงาน 2</h3>
+            <p>คำอธิบายผลงาน 2: [รายละเอียดเพิ่มเติม]</p>
         </div>
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/300" alt="ผลงาน 3">
             <h3>ชื่อผลงาน 3</h3>
+            <p>คำอธิบายผลงาน 3: [รายละเอียดเพิ่มเติม]</p>
         </div>
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/300" alt="ผลงาน 4">
             <h3>ชื่อผลงาน 4</h3>
+            <p>คำอธิบายผลงาน 4: [รายละเอียดเพิ่มเติม]</p>
         </div>
     </div>
-</section>
-
-<section id="about" class="about">
-    <h2>เกี่ยวกับฉัน</h2>
-    <p>ฉันเป็นนักออกแบบที่หลงใหลในศิลปะและเทคโนโลยี มีประสบการณ์ในด้านการออกแบบกราฟิกและการพัฒนาเว็บ</p>
 </section>
 
 <section id="contact" class="contact">
