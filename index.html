@@ -31,10 +31,15 @@
         </div>
     </section>
 
-    <section id="about" class="fade-in">
-        <h2>เกี่ยวกับเรา</h2>
-        <p>ข้อมูลเกี่ยวกับบริษัทและบริการ</p>
-        <img src="https://via.placeholder.com/800x400" alt="เกี่ยวกับเรา" class="about-image">
+    <section id="about" class="about-section">
+        <div class="about-image-container">
+            <img src="https://via.placeholder.com/800x400" alt="เกี่ยวกับเรา" class="about-image">
+            <div class="about-overlay">
+                <h2>เกี่ยวกับเรา</h2>
+                <p>ข้อมูลเกี่ยวกับบริษัทและบริการ</p>
+                <button class="about-button">อ่านเพิ่มเติม</button>
+            </div>
+        </div>
     </section>
 
     <section id="services" class="fade-in">
@@ -60,6 +65,14 @@
     <footer>
         <p>&copy; 2024 เว็บไซต์ของเรา</p>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>รายละเอียดเพิ่มเติม</h2>
+            <p>ข้อมูลเพิ่มเติมเกี่ยวกับบริษัทของเรา...</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
