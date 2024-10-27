@@ -10,67 +10,36 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             color: #333;
-            overflow-x: hidden;
         }
         header {
-            background: #222;
-            color: #fff;
+            background: #fff;
             padding: 20px;
-            position: relative;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         nav a {
-            color: #fff;
-            margin: 0 20px;
+            margin: 0 15px;
             text-decoration: none;
-            position: relative;
+            color: #333;
+            font-weight: 700;
         }
-        nav a::after {
-            content: '';
-            display: block;
-            height: 2px;
-            background: #fff;
-            width: 0;
-            transition: width 0.3s;
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            transform: translateX(-50%);
-        }
-        nav a:hover::after {
-            width: 100%;
+        nav a:hover {
+            border-bottom: 2px solid #333;
         }
         .hero {
-            background-image: url('https://via.placeholder.com/1600x600');
-            background-size: cover;
-            background-position: center;
-            height: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            background: #eaeaea;
+            padding: 60px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
         .hero h1 {
-            font-size: 3rem;
             margin: 0;
-            animation: fadeIn 1s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            font-size: 2.5rem;
         }
         section {
             padding: 40px 20px;
-            max-width: 1200px;
+            max-width: 900px;
             margin: auto;
         }
         .portfolio {
@@ -81,36 +50,50 @@
         .portfolio-item {
             background: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
+            transition: transform 0.2s;
         }
         .portfolio-item img {
             width: 100%;
             height: auto;
-            transition: transform 0.3s;
-        }
-        .portfolio-item:hover img {
-            transform: scale(1.1);
         }
         .portfolio-item h3 {
-            padding: 10px;
+            padding: 15px;
             text-align: center;
+            margin: 0;
+            font-size: 1.2rem;
         }
         .about, .contact {
             background: #fff;
             padding: 20px;
             margin-top: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            background: #222;
+            background: #fff;
+            color: #333;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #333;
             color: #fff;
-            position: relative;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background: #555;
         }
     </style>
 </head>
@@ -159,12 +142,15 @@
 <section id="contact" class="contact">
     <h2>ติดต่อ</h2>
     <form>
-        <label for="name">ชื่อ:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">อีเมล:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="message">ข้อความ:</label><br>
-        <textarea id="message" name="message" required></textarea><br>
+        <label for="name">ชื่อ:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">อีเมล:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">ข้อความ:</label>
+        <textarea id="message" name="message" required></textarea>
+        
         <input type="submit" value="ส่ง">
     </form>
 </section>
