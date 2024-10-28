@@ -27,9 +27,9 @@ body, html {
 
 /* เนื้อหาในส่วน hero */
 header {
-    position: relative; /* ทำให้สามารถควบคุมตำแหน่งได้ */
-    z-index: 10; /* ให้เมนูอยู่ด้านบนสุด */
+    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังขาวโปร่งใส */
     padding: 20px; /* ระยะห่างจากขอบ */
+    border-radius: 5px; /* ขอบมน */
 }
 
 .menu-icon {
