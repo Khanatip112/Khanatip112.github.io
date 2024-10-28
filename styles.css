@@ -40,6 +40,19 @@ header {
     text-align: center;
 }
 
+.menu-icon {
+    cursor: pointer;
+    z-index: 10; /* ทำให้แน่ใจว่าเมนูจะอยู่ด้านบนสุด */
+}
+
+.menu-icon div {
+    width: 30px; /* ความกว้างของขีด */
+    height: 4px; /* ความสูงของขีด */
+    background-color: white; /* สีของขีด */
+    margin: 6px 0; /* ระยะห่างระหว่างขีด */
+}
+
+
 .scroll-down {
     position: absolute;
     bottom: 30px;
