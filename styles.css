@@ -36,6 +36,26 @@ nav ul li a {
     color: white;
 }
 
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-item {
+    text-align: center;
+}
+
+.about-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
 .background-video {
     position: absolute;
     top: 0;
