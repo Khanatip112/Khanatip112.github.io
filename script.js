@@ -1,10 +1,8 @@
 function toggleMenu() {
-    alert("เปิดเมนูเพิ่มเติม");
-}
-
-function scrollToNext() {
-    window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-    });
+    const menu = document.getElementById('menu'); // สมมติว่าเมนูมี ID เป็น 'menu'
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
 }
