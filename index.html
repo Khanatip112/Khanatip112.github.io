@@ -3,98 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์ตัวอย่าง</title>
+    <title>หน้าแรก</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- ส่วนของเมนูแบบขีดสามขีด -->
     <header>
-        <div class="logo">LOGO</div>
-        <nav>
-            <ul>
-                <li><a href="#home">หน้าแรก</a></li>
-                <li><a href="#about">เกี่ยวกับเรา</a></li>
-                <li><a href="#services">บริการ</a></li>
-                <li><a href="#contact">ติดต่อเรา</a></li>
-            </ul>
-        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
-    
-    <section id="home" class="hero">
+
+    <!-- ส่วนของวิดีโอหรือรูปพื้นหลัง -->
+    <section class="hero">
         <video autoplay muted loop class="background-video">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="path/to/your-video.mp4" type="video/mp4">
             วิดีโอไม่สามารถเล่นได้
         </video>
         <div class="hero-content">
-            <h1>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h1>
-            <p>ข้อความแนะนำเกี่ยวกับเว็บไซต์</p>
-            <button class="cta">เรียนรู้เพิ่มเติม</button>
+            <h1>LIOR RAZ</h1>
+            <p>ACTOR - WRITER - SPEAKER</p>
+        </div>
+        <!-- ไอคอนลูกศรเลื่อนลง -->
+        <div class="scroll-down" onclick="scrollToNext()">
+            &darr;
         </div>
     </section>
-
-    <section id="about" class="about-section">
-        <div class="about-image-container">
-            <img src="https://via.placeholder.com/1200x600" alt="เกี่ยวกับเรา" class="about-image">
-            <div class="about-overlay">
-                <h2>เกี่ยวกับเรา</h2>
-                <p>ชื่อ: [ชื่อของคุณ]</p>
-                <p>สถานศึกษา: [ชื่อสถานศึกษา]</p>
-                <p>ผลงาน: [รายละเอียดผลงาน]</p>
-                <button class="about-button">+</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="fade-in">
-        <h2>บริการของเรา</h2>
-        <ul>
-            <li>บริการ 1</li>
-            <li>บริการ 2</li>
-            <li>บริการ 3</li>
-        </ul>
-    </section>
-
-    <section id="contact" class="fade-in">
-        <h2>ติดต่อเรา</h2>
-        <form>
-            <label for="name">ชื่อ:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">อีเมล:</label>
-            <input type="email" id="email" name="email" required>
-            <input type="submit" value="ส่ง">
-        </form>
-    </section>
-
-    <section id="about" class="about-section">
-    <div class="about-item">
-        <img src="https://via.placeholder.com/1200x600" alt="ชื่อ">
-        <h2>ชื่อ</h2>
-        <p>[ชื่อของคุณ]</p>
-    </div>
-
-    <div class="about-item">
-        <img src="https://via.placeholder.com/1200x600" alt="สถานศึกษา">
-        <h2>สถานศึกษา</h2>
-        <p>[ชื่อสถานศึกษา]</p>
-    </div>
-
-    <div class="about-item">
-        <img src="https://via.placeholder.com/1200x600" alt="ผลงาน">
-        <h2>ผลงาน</h2>
-        <p>[รายละเอียดผลงาน]</p>
-    </div>
-   </section>
-
-    <footer>
-        <p>&copy; 2024 เว็บไซต์ของเรา</p>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>รายละเอียดเพิ่มเติม</h2>
-            <p>ข้อมูลเพิ่มเติมเกี่ยวกับบริษัทของเรา...</p>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
