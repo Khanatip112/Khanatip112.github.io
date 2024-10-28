@@ -47,7 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* สีของลิงก์ */
+    color: black; /* สีของลิงก์ */
     text-decoration: none; /* ไม่มีขีดเส้นใต้ */
 }
 
@@ -71,7 +71,7 @@ nav ul li a {
 .menu-icon div {
     width: 30px; /* ความกว้างของขีด */
     height: 4px; /* ความสูงของขีด */
-    background-color: Black; /* สีของขีด */
+    background-color: black; /* สีของขีด */
     margin: 6px 0; /* ระยะห่างระหว่างขีด */
 }
 
