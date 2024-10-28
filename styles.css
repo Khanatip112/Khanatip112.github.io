@@ -26,14 +26,27 @@ body, html {
 }
 
 /* เนื้อหาในส่วน hero */
-.hero-content {
-    position: relative;
-    z-index: 20; /* อยู่ด้านบนของรูปภาพ */
-    color: white; /* สีตัวอักษร */
-    text-align: center; /* จัดกลาง */
-    top: 50%; /* ยกให้สูงขึ้น */
-    transform: translateY(-50%); /* ให้อยู่กลางในแนวตั้ง */
+header {
+    position: relative; /* ทำให้สามารถควบคุมตำแหน่งได้ */
+    z-index: 10; /* ให้เมนูอยู่ด้านบนสุด */
+    padding: 20px; /* ระยะห่างจากขอบ */
 }
+
+.menu-icon {
+    cursor: pointer;
+    z-index: 20; /* ให้แน่ใจว่าเมนูสามขีดอยู่ด้านบน */
+    position: absolute; /* ทำให้สามารถควบคุมตำแหน่งได้ */
+    top: 20px; /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
+}
+
+.menu-icon div {
+    width: 30px; /* ความกว้างของขีด */
+    height: 4px; /* ความสูงของขีด */
+    background-color: black; /* สีดำ */
+    margin: 6px 0; /* ระยะห่างระหว่างขีด */
+}
+
 
 /* สไตล์สำหรับลิงก์ในเมนู */
 nav ul {
