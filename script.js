@@ -1,39 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("section");
+// ฟังก์ชันการแสดงโมดอล
+const modal = document.getElementById("modal");
+const modalButton = document.querySelector(".about-button");
+const closeButton = document.querySelector(".close");
 
-    const options = {
-        threshold: 0.1
-    };
+modalButton.onclick = () => {
+    modal.style.display = "block";
+};
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
+closeButton.onclick = () => {
+    modal.style.display = "none";
+};
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // Modal functionality
-    const modal = document.getElementById("modal");
-    const btn = document.querySelector(".about-button");
-    const span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function() {
+window.onclick = (event) => {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
+};
 
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
+// เอฟเฟกต์เลือนเมื่อเลื่อนหน้าจอ
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+const fadeInOnScroll = () => {
+    fadeInElements.forEach((element) => {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        if (position < screenPosition) {
+            element.classList.add("active");
         }
-    }
-});
+    });
+};
+
+window.addEventListener("scroll", fadeInOnScroll);
