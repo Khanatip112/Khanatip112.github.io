@@ -59,6 +59,27 @@ nav ul li a {
     text-decoration: none; /* ไม่มีขีดเส้นใต้ */
 }
 
+.hero-content {
+    position: absolute; /* ทำให้ข้อความอยู่เหนือรูปภาพ */
+    top: 50%; /* อยู่กลางในแนวตั้ง */
+    left: 50%; /* อยู่กลางในแนวนอน */
+    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
+    color: white; /* สีตัวอักษร */
+    text-align: center; /* จัดกลาง */
+    z-index: 10; /* ให้แน่ใจว่าข้อความอยู่ด้านบนของรูปภาพ */
+}
+
+h1 {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    margin: 0; /* ไม่มีระยะห่าง */
+}
+
+p {
+    font-size: 24px; /* ขนาดตัวอักษร */
+    margin-top: 10px; /* ระยะห่างระหว่างหัวข้อกับข้อความ */
+}
+
+
 /* สไตล์สำหรับไอคอนเลื่อนลง */
 .scroll-down {
     position: absolute;
