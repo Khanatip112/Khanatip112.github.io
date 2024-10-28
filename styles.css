@@ -75,18 +75,6 @@ nav ul li a {
     color: white; /* สีตัวอักษร */
 }
 
-/* เมนูแบบ Hamburger */
-.menu-icon {
-    cursor: pointer;
-    z-index: 10; /* ให้แสดงอยู่ด้านบนสุด */
-}
-
-.menu-icon div {
-    width: 30px; /* ความกว้างของขีด */
-    height: 4px; /* ความสูงของขีด */
-    background-color: white; /* เปลี่ยนเป็นสีดำ */
-    margin: 6px 0; /* ระยะห่างระหว่างขีด */
-}
 
 /* เมนูที่ซ่อนอยู่ */
 #menu {
