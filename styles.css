@@ -47,6 +47,11 @@ body, html {
     font-size: 2rem;
     cursor: pointer;
 }
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งแสง */
+    padding: 20px;
+    border-radius: 10px;
+}
 
 .menu-icon {
     position: absolute;
@@ -54,6 +59,25 @@ body, html {
     right: 20px;
     cursor: pointer;
     z-index: 10;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .menu-icon div {
