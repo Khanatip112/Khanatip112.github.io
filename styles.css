@@ -43,7 +43,7 @@ header {
 .menu-icon div {
     width: 30px; /* ความกว้างของขีด */
     height: 4px; /* ความสูงของขีด */
-    background-color: black; /* สีดำ */
+    background-color: white; /* สีดำ */
     margin: 6px 0; /* ระยะห่างระหว่างขีด */
 }
 
