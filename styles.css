@@ -163,8 +163,6 @@ p {
     bottom: 20px; /* ระยะห่างจากด้านล่าง */
     left: 50%; /* กึ่งกลาง */
     transform: translate(-50%); /* ให้อยู่กลาง */
-    z-index: 20; /* ให้อยู่ด้านบนสุด */
-}
 
 * {
     box-sizing: border-box;
