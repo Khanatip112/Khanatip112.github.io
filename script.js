@@ -18,10 +18,10 @@ function addPage() {
     newPage.style.display = "block"; // แสดงหน้าใหม่
 
     // เพิ่มอนิเมชั่นการเลื่อนลง
-    newPage.style.transform = "translateY(-100%)";
+    newPage.style.transform = "translateY(-100%)"; // เริ่มที่ตำแหน่งเหนือหน้า
     setTimeout(() => {
         newPage.style.transition = "transform 0.5s ease-in-out"; // ตั้งเวลาสำหรับการเปลี่ยนแปลง
-        newPage.style.transform = "translateY(0)";
+        newPage.style.transform = "translateY(0)"; // เลื่อนลงมาที่ตำแหน่งปกติ
     }, 10); // รอสักครู่เพื่อให้การแสดงผลทำงาน
 }
 
@@ -31,7 +31,7 @@ function removePage() {
     
     // เพิ่มอนิเมชั่นการเลื่อนขึ้น
     newPage.style.transition = "transform 0.5s ease-in-out"; // ตั้งเวลาสำหรับการเปลี่ยนแปลง
-    newPage.style.transform = "translateY(-100%)";
+    newPage.style.transform = "translateY(-100%)"; // เลื่อนขึ้นไปเหนือหน้า
 
     setTimeout(() => {
         newPage.style.display = "none"; // ซ่อนหน้าใหม่หลังจากเลื่อนขึ้น
