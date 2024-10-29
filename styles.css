@@ -1,45 +1,164 @@
-// ฟังก์ชันเพื่อแสดงหรือซ่อนเมนู
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("show");
+/* ปรับสไตล์พื้นฐาน */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: black; /* สีพื้นหลัง */
 }
 
-// ฟังก์ชันเพื่อเลื่อนลงไปยังส่วนถัดไป
-function scrollToNext() {
-    window.scrollBy({
-        top: window.innerHeight,
-        behavior: 'smooth'
-    });
+/* สไตล์สำหรับส่วน hero */
+.hero {
+    position: relative;
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    overflow: hidden;
 }
 
-// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน About Me
-function addAboutMePage() {
-    const newPage = document.getElementById("newAboutMePage");
-    newPage.style.display = "block"; // แสดงหน้าใหม่
-    window.scrollTo({
-        top: newPage.offsetTop,
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
-    });
+/* สไตล์สำหรับส่วน About Me และ Education */
+#about, #education {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน About Me
-function removeAboutMePage() {
-    const newPage = document.getElementById("newAboutMePage");
-    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+/* สไตล์สำหรับปุ่มเครื่องหมายบวก */
+.expand-toggle {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    width: 50px; /* ขนาดปุ่ม */
+    height: 50px; /* ขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
+    bottom: 20px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* กึ่งกลาง */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
 }
 
-// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน Education
-function addEducationPage() {
-    const newPage = document.getElementById("newEducationPage");
-    newPage.style.display = "block"; // แสดงหน้าใหม่
-    window.scrollTo({
-        top: newPage.offsetTop,
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
-    });
+/* หน้าใหม่ */
+#newAboutMePage, #newEducationPage {
+    display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
 }
 
-// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน Education
-function removeEducationPage() {
-    const newPage = document.getElementById("newEducationPage");
-    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+/* รูปภาพพื้นหลัง */
+.background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* กว้างเต็มจอ */
+    height: 100vh; /* สูงเต็มจอ */
+    object-fit: cover; /* ปรับขนาดให้พอดีกับพื้นที่ */
+    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
+}
+
+/* เนื้อหาในส่วน hero */
+.hero-content {
+    position: absolute; /* ทำให้ข้อความอยู่เหนือรูปภาพ */
+    top: 50%; /* อยู่กลางในแนวตั้ง */
+    left: 50%; /* อยู่กลางในแนวนอน */
+    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
+    color: white; /* สีตัวอักษร */
+    text-align: center; /* จัดกลาง */
+    z-index: 20; /* ให้แน่ใจว่าข้อความอยู่ด้านบนของรูปภาพ */
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งใส */
+    padding: 20px; /* เพิ่มระยะห่างรอบข้อความ */
+    border-radius: 10px; /* ขอบมน */
+}
+
+h1 {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    margin: 0; /* ไม่มีระยะห่าง */
+}
+
+h2 {
+    font-size: 36px; /* ขนาดตัวอักษร */
+    margin: 0; /* ไม่มีระยะห่าง */
+}
+
+p {
+    font-size: 24px; /* ขนาดตัวอักษร */
+    margin-top: 10px; /* ระยะห่างระหว่างหัวข้อกับข้อความ */
+}
+
+/* สไตล์สำหรับแทบสามขีด (menu-icon) */
+.menu-icon {
+    position: absolute;
+    top: 20px; /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    z-index: 30; /* ให้อยู่ด้านบนสุดของรูปพื้นหลัง */
+}
+
+.menu-icon div {
+    width: 30px; /* ความกว้างของขีด */
+    height: 4px; /* ความสูงของขีด */
+    background-color: white; /* สีของขีด */
+    margin: 6px 0; /* ระยะห่างระหว่างขีด */
+    transition: all 0.3s ease; /* ทำให้มีแอนิเมชันเวลาเปลี่ยน */
+}
+
+/* สไตล์สำหรับเมนูที่ซ่อนอยู่ */
+#menu {
+    display: none; /* ซ่อนเมนูโดยเริ่มต้น */
+    position: absolute;
+    top: 60px; /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
+    background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังโปร่งใส */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 30;
+}
+
+#menu.show {
+    display: block; /* แสดงเมนูเมื่อมีคลาส show */
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    padding: 10px 0;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* สไตล์สำหรับไอคอนเลื่อนลง */
+.scroll-down {
+    position: absolute;
+    bottom: 30px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* ตรงกลางในแนวนอน */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    color: white; /* สีตัวอักษร */
+}
+
+/* สไตล์สำหรับปุ่มเครื่องหมายลบ */
+.collapse-toggle {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    width: 50px; /* ขนาดปุ่ม */
+    height: 50px; /* ขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
+    bottom: 20px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* กึ่งกลาง */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
+    z-index: 30; /* ให้แน่ใจว่ามันอยู่ด้านบนสุด */
+}
+
+/* กำหนดการตั้งค่าของ box-sizing ให้เป็น border-box */
+* {
+    box-sizing: border-box;
 }
