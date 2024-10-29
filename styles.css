@@ -7,19 +7,18 @@ body, html {
     background-color: black; /* สีพื้นหลัง */
 }
 
+/* ลบ padding ใน #about */
+#about {
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
 /* สไตล์สำหรับส่วน hero */
 .hero {
     position: relative;
     height: 100vh; /* ความสูงเต็มหน้าจอ */
     overflow: hidden;
-}
-
-/* สไตล์สำหรับส่วน About Me */
-#about {
-    padding: 50px;
-    text-align: center;
-    background-color: #f8f8f8;
-    color: #333;
 }
 
 /* สไตล์สำหรับปุ่มเครื่องหมายบวก */
@@ -40,12 +39,6 @@ body, html {
 /* หน้าใหม่ */
 #newPage {
     display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งใส */
-    padding: 0;
-    border-radius: 0; /* ขอบมน */
-    margin-top: 0; /* ระยะห่างด้านบน */
-    position: relative; /* ตั้งตำแหน่ง */
 }
 
 /* รูปภาพพื้นหลัง */
