@@ -43,3 +43,37 @@ function removeEducationPage() {
     const newPage = document.getElementById("newEducationPage");
     newPage.style.display = "none"; // ซ่อนหน้าใหม่
 }
+
+
+
+// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน Skill
+function addSkillPage() {
+    const newPage = document.getElementById("newSkillPage");
+    newPage.style.display = "block"; // แสดงหน้าใหม่
+    window.scrollTo({
+        top: newPage.offsetTop,
+        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
+    });
+}
+
+// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน About Me
+function removeSkillPage() {
+    const newPage = document.getElementById("newSkillPage");
+    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+}
+
+// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน Contact
+function addContactPage() {
+    const newPage = document.getElementById("newContactPage");
+    newPage.style.display = "block"; // แสดงหน้าใหม่
+    window.scrollTo({
+        top: newPage.offsetTop,
+        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
+    });
+}
+
+// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน Education
+function removeContactPage() {
+    const newPage = document.getElementById("newContactPage");
+    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+}
