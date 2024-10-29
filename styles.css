@@ -148,3 +148,7 @@ p {
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
 }
+
+* {
+    box-sizing: border-box;
+}
