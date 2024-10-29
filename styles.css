@@ -151,7 +151,9 @@ body.menu-open {
 
 /* สไตล์สำหรับปุ่มเครื่องหมายลบ */
 .collapse-toggle {
-    font-size: 48px; /* ขนาดตัวอักษร */
+    font-size: 48px;/* ขนาดตัวอักษร */
+    line-height: 50px; /* ทำให้ข้อความอยู่กึ่งกลางในปุ่มวงกลม */
+    text-align: center; /* จัดข้อความให้กึ่งกลางในแนวนอน */
     cursor: pointer;
     color: white;
     background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
