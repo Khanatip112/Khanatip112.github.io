@@ -14,22 +14,12 @@ body, html {
     overflow: hidden;
 }
 
-section {
-    margin: 0; /* ลบระยะห่างที่อาจมี */
-    padding: 0; /* ลบระยะห่างภายใน */
-}
-
 /* สไตล์สำหรับส่วน About Me */
 #about {
     padding: 50px;
     text-align: center;
     background-color: #f8f8f8;
     color: #333;
-}
-
-.about-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 /* สไตล์สำหรับปุ่มเครื่องหมายบวก */
@@ -54,13 +44,23 @@ section {
     transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
+/* หน้าใหม่ */
+.new-page {
+    display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งใส */
+    padding: 20px;
+    border-radius: 10px; /* ขอบมน */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
 /* รูปภาพพื้นหลัง */
 .background-image {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%; /* เปลี่ยนเป็น 100% */
-    height: 100%; /* เปลี่ยนเป็น 100% */
+    width: 100vw; /* กว้างเต็มจอ */
+    height: 100vh; /* สูงเต็มจอ */
     object-fit: cover; /* ปรับขนาดให้พอดีกับพื้นที่ */
     transform: translate(-50%, -50%); /* ให้อยู่กลาง */
 }
@@ -152,12 +152,3 @@ p {
 * {
     box-sizing: border-box;
 }
-.new-page {
-    display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งใส */
-    padding: 20px;
-    border-radius: 10px; /* ขอบมน */
-    margin-top: 20px; /* ระยะห่างด้านบน */
-}
-
