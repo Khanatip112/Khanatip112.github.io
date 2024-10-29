@@ -38,7 +38,7 @@ body, html {
 }
 
 /* หน้าใหม่ */
-#newAboutMePage, #newEducationPage {
+#newAboutMePage, #newEducationPage ,#newSkillPage, #newContactPage {
     display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
 }
 
