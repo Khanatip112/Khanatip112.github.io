@@ -49,6 +49,55 @@ p {
     margin-top: 10px; /* ระยะห่างระหว่างหัวข้อกับข้อความ */
 }
 
+/* สไตล์สำหรับแทบสามขีด (menu-icon) */
+.menu-icon {
+    position: absolute;
+    top: 20px; /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    z-index: 30; /* ให้อยู่ด้านบนสุดของรูปพื้นหลัง */
+}
+
+.menu-icon div {
+    width: 30px; /* ความกว้างของขีด */
+    height: 4px; /* ความสูงของขีด */
+    background-color: white; /* สีของขีด */
+    margin: 6px 0; /* ระยะห่างระหว่างขีด */
+    transition: all 0.3s ease; /* ทำให้มีแอนิเมชันเวลาเปลี่ยน */
+}
+
+/* สไตล์สำหรับเมนูที่ซ่อนอยู่ */
+#menu {
+    display: none; /* ซ่อนเมนูโดยเริ่มต้น */
+    position: absolute;
+    top: 60px; /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
+    background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังโปร่งใส */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 30;
+}
+
+#menu.show {
+    display: block; /* แสดงเมนูเมื่อมีคลาส show */
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    padding: 10px 0;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 /* สไตล์สำหรับไอคอนเลื่อนลง */
 .scroll-down {
     position: absolute;
@@ -58,13 +107,4 @@ p {
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
-}
-
-/* เมนูที่ซ่อนอยู่ */
-#menu {
-    display: none; /* ซ่อนเมนูโดยเริ่มต้น */
-}
-
-#menu.show {
-    display: block; /* แสดงเมนูเมื่อถูกเรียกใช้ */
 }
