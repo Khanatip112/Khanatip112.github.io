@@ -12,34 +12,26 @@ function scrollToNext() {
     });
 }
 
-// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน About Me
 function addAboutMePage() {
-    const newPage = document.getElementById("newAboutMePage");
-    newPage.style.display = "block"; // แสดงหน้าใหม่
-    window.scrollTo({
-        top: newPage.offsetTop,
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
-    });
+    document.getElementById('newAboutMePage').style.display = 'block';
+    document.getElementById('about').style.display = 'none'; // ซ่อนหน้า About Me
+    // เพิ่มแอนิเมชันที่ต้องการ
 }
 
-// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน About Me
 function removeAboutMePage() {
-    const newPage = document.getElementById("newAboutMePage");
-    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+    document.getElementById('newAboutMePage').style.display = 'none';
+    document.getElementById('about').style.display = 'block'; // แสดงหน้า About Me
+    // เพิ่มแอนิเมชันที่ต้องการ
 }
 
-// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน Education
 function addEducationPage() {
-    const newPage = document.getElementById("newEducationPage");
-    newPage.style.display = "block"; // แสดงหน้าใหม่
-    window.scrollTo({
-        top: newPage.offsetTop,
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
-    });
+    document.getElementById('newEducationPage').style.display = 'block';
+    document.getElementById('education').style.display = 'none'; // ซ่อนหน้า Education
+    // เพิ่มแอนิเมชันที่ต้องการ
 }
 
-// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน Education
 function removeEducationPage() {
-    const newPage = document.getElementById("newEducationPage");
-    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+    document.getElementById('newEducationPage').style.display = 'none';
+    document.getElementById('education').style.display = 'block'; // แสดงหน้า Education
+    // เพิ่มแอนิเมชันที่ต้องการ
 }
