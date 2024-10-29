@@ -1,14 +1,10 @@
 function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("show");
-
-    // เพิ่มหรือเอาคลาสเพื่อดันเนื้อหาเมื่อเมนูเปิด
-    if (menu.classList.contains("show")) {
-        document.body.classList.add("menu-open");
-    } else {
-        document.body.classList.remove("menu-open");
-    }
+    const menu = document.getElementById('menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    menu.classList.toggle('show'); // เพิ่มหรือลดคลาส show
+    menuIcon.classList.toggle('active'); // เพิ่มหรือลดคลาส active
 }
+
 
 
 // ฟังก์ชันเพื่อเลื่อนลงไปยังส่วนถัดไป
