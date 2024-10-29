@@ -35,6 +35,7 @@ body, html {
     bottom: 20px; /* ระยะห่างจากด้านล่าง */
     left: 50%; /* กึ่งกลาง */
     transform: translateX(-50%); /* ให้อยู่กลาง */
+    z-index: 20; /* ให้อยู่เหนือเนื้อหา */
 }
 
 /* สไตล์สำหรับเนื้อหาเพิ่มเติม */
@@ -48,10 +49,10 @@ body, html {
 .new-page {
     display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งใส */
+    background-color: rgba(255, 255, 255, 0.9); /* พื้นหลังโปร่งใส */
     padding: 20px;
     border-radius: 10px; /* ขอบมน */
-    margin-top: 20px; /* ระยะห่างด้านบน */
+    position: relative; /* ใช้ตำแหน่งที่แน่นอน */
 }
 
 /* รูปภาพพื้นหลัง */
@@ -147,6 +148,21 @@ p {
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
+}
+
+.collapse-toggle {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    width: 50px; /* ขนาดปุ่ม */
+    height: 50px; /* ขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
+    bottom: 20px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* กึ่งกลาง */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
+    z-index: 20; /* ให้อยู่เหนือเนื้อหา */
 }
 
 * {
