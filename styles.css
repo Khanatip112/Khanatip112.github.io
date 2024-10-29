@@ -147,8 +147,13 @@ body.menu-open {
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
-    background-color: rgba(0, 0, 0, 0.8);
-     border-radius: 50%;
+    width: 50px; /* ขนาดปุ่ม */
+    height: 50px; /* ขนาดปุ่ม */
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    display: flex; /* ใช้ flex เพื่อจัดให้อยู่กลางในแนวตั้งและแนวนอน */
+    align-items: center;
+    justify-content: center;
 }
 
 /* สไตล์สำหรับปุ่มเครื่องหมายลบ */
