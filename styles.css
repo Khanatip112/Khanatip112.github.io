@@ -37,6 +37,13 @@ body, html {
     transform: translateX(-50%); /* ให้อยู่กลาง */
 }
 
+/* สไตล์สำหรับเนื้อหาเพิ่มเติม */
+.more-info {
+    margin-top: 20px;
+    display: none; /* ซ่อนเนื้อหานี้โดยเริ่มต้น */
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
 /* หน้าใหม่ */
 #newPage {
     display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
@@ -44,22 +51,8 @@ body, html {
     background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งใส */
     padding: 20px;
     border-radius: 10px; /* ขอบมน */
-    transition: transform 0.5s ease-in-out; /* เพิ่มการเปลี่ยนแปลง */
-}
-
-/* ปุ่มเครื่องหมายลบ */
-.collapse-toggle {
-    font-size: 48px; /* ขนาดตัวอักษร */
-    cursor: pointer;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
-    width: 50px; /* ขนาดปุ่ม */
-    height: 50px; /* ขนาดปุ่ม */
-    border-radius: 50%; /* ทำให้เป็นวงกลม */
-    position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
-    bottom: 20px; /* ระยะห่างจากด้านล่าง */
-    left: 50%; /* กึ่งกลาง */
-    transform: translate(-50%); /* ให้อยู่กลาง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    position: relative; /* ตั้งตำแหน่ง */
 }
 
 /* รูปภาพพื้นหลัง */
@@ -89,11 +82,6 @@ body, html {
 
 h1 {
     font-size: 48px; /* ขนาดตัวอักษร */
-    margin: 0; /* ไม่มีระยะห่าง */
-}
-
-h2 {
-    font-size: 36px; /* ขนาดตัวอักษรของหัวข้อ */
     margin: 0; /* ไม่มีระยะห่าง */
 }
 
@@ -142,4 +130,42 @@ p {
     padding: 0;
 }
 
-#menu
+#menu ul li {
+    padding: 10px 0;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* สไตล์สำหรับไอคอนเลื่อนลง */
+.scroll-down {
+    position: absolute;
+    bottom: 30px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* ตรงกลางในแนวนอน */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    color: white; /* สีตัวอักษร */
+}
+
+/* สไตล์สำหรับเครื่องหมายลบ */
+.collapse-toggle {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    width: 50px; /* ขนาดปุ่ม */
+    height: 50px; /* ขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
+    bottom: 20px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* กึ่งกลาง */
+    transform: translate(-50%); /* ให้อยู่กลาง */
+    z-index: 20; /* ให้อยู่ด้านบนสุด */
+}
+
+* {
+    box-sizing: border-box;
+}
