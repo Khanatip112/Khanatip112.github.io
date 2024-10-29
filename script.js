@@ -7,35 +7,39 @@ function toggleMenu() {
 // ฟังก์ชันเพื่อเลื่อนลงไปยังส่วนถัดไป
 function scrollToNext() {
     window.scrollBy({
-        top: window.innerHeight, // เลื่อนลงไปยังความสูงของหน้าจอ
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
+        top: window.innerHeight,
+        behavior: 'smooth'
     });
 }
 
-// ฟังก์ชันเพื่อเพิ่มหน้าใหม่
-function addPage() {
-    const newPage = document.getElementById("newPage");
+// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน About Me
+function addAboutMePage() {
+    const newPage = document.getElementById("newAboutMePage");
     newPage.style.display = "block"; // แสดงหน้าใหม่
-
-    // เลื่อนลงไปยังหน้าใหม่
-    window.scrollBy({
-        top: window.innerHeight, // เลื่อนลงไปยังความสูงของหน้าจอ
+    window.scrollTo({
+        top: newPage.offsetTop,
         behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
     });
 }
 
-// ฟังก์ชันเพื่อซ่อนหน้าใหม่
-function removePage() {
-    const newPage = document.getElementById("newPage");
-    
-    // เลื่อนขึ้นไปยังหน้าก่อนหน้า
-    window.scrollBy({
-        top: -window.innerHeight, // เลื่อนขึ้นไปยังความสูงของหน้าจอ
+// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน About Me
+function removeAboutMePage() {
+    const newPage = document.getElementById("newAboutMePage");
+    newPage.style.display = "none"; // ซ่อนหน้าใหม่
+}
+
+// ฟังก์ชันเพื่อเพิ่มหน้าใหม่ใน Education
+function addEducationPage() {
+    const newPage = document.getElementById("newEducationPage");
+    newPage.style.display = "block"; // แสดงหน้าใหม่
+    window.scrollTo({
+        top: newPage.offsetTop,
         behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
     });
+}
 
-    // รอ 400ms (ระยะเวลาอนิเมชั่น) แล้วซ่อนหน้าใหม่
-    setTimeout(() => {
-        newPage.style.display = "none"; // ซ่อนหน้าใหม่
-    }, 400);
+// ฟังก์ชันเพื่อซ่อนหน้าใหม่ใน Education
+function removeEducationPage() {
+    const newPage = document.getElementById("newEducationPage");
+    newPage.style.display = "none"; // ซ่อนหน้าใหม่
 }
