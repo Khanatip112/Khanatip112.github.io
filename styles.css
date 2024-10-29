@@ -1,4 +1,3 @@
-
 body, html {
     margin: 0;
     padding: 0;
@@ -38,9 +37,8 @@ body, html {
     transform: translateX(-50%); /* ให้อยู่กลาง */
 }
 
-
 /* หน้าใหม่ */
-#newAboutMePage, #newEducationPage, #newSkillPage, #newContactPage {
+#newAboutMePage, #newEducationPage {
     display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
 }
 
@@ -153,9 +151,7 @@ body.menu-open {
 
 /* สไตล์สำหรับปุ่มเครื่องหมายลบ */
 .collapse-toggle {
-    font-size: 36px; /* ขนาดตัวอักษรที่เหมาะสม */
-    line-height: 50px; /* ทำให้ข้อความอยู่กึ่งกลางในปุ่มวงกลม */
-    text-align: center; /* จัดข้อความให้กึ่งกลางในแนวนอน */
+    font-size: 48px; /* ขนาดตัวอักษร */
     cursor: pointer;
     color: white;
     background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
