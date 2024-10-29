@@ -17,13 +17,13 @@
 
     <nav id="menu">
         <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#section3">Section 3</a></li>
         </ul>
     </nav>
 
-    <section class="hero" id="main">
+    <section class="hero">
         <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="Hero Image" class="background-image">
         <div class="hero-content">
             <h1>KHANATIP NOKKHUNTHOT</h1>
@@ -33,6 +33,7 @@
         </div>
     </section>
 
+    <!-- ส่วน About Me -->
     <section class="hero" id="about">
         <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="About Me Image" class="background-image">
         <div class="hero-content">
@@ -41,17 +42,18 @@
         <div class="expand-toggle" onclick="addAboutMePage()">+</div>
     </section>
 
-    <!-- หน้าใหม่สำหรับ About Me -->
-    <div id="newAboutMePage" class="new-page" style="display: none;">
+    <!-- หน้าใหม่ของ About Me -->
+    <div id="newAboutMePage" style="display: none;">
         <section class="hero">
-            <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="New Page Image" class="background-image">
+            <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="New About Me Page" class="background-image">
             <div class="hero-content">
-                <h2>นี่คือหน้าใหม่ About Me</h2>
+                <h2>นี่คือหน้าใหม่จาก About Me</h2>
             </div>
             <div class="collapse-toggle" onclick="removeAboutMePage()">-</div>
         </section>
     </div>
 
+    <!-- ส่วน Education -->
     <section class="hero" id="education">
         <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="Education Image" class="background-image">
         <div class="hero-content">
@@ -60,12 +62,12 @@
         <div class="expand-toggle" onclick="addEducationPage()">+</div>
     </section>
 
-    <!-- หน้าใหม่สำหรับ Education -->
-    <div id="newEducationPage" class="new-page" style="display: none;">
+    <!-- หน้าใหม่ของ Education -->
+    <div id="newEducationPage" style="display: none;">
         <section class="hero">
-            <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="New Page Image" class="background-image">
+            <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="New Education Page" class="background-image">
             <div class="hero-content">
-                <h2>นี่คือหน้าใหม่ Education</h2>
+                <h2>นี่คือหน้าใหม่จาก Education</h2>
             </div>
             <div class="collapse-toggle" onclick="removeEducationPage()">-</div>
         </section>
