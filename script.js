@@ -7,19 +7,19 @@ function toggleMenu() {
 // ฟังก์ชันเพื่อเลื่อนลงไปยังส่วนถัดไป
 function scrollToNext() {
     window.scrollBy({
-        top: window.innerHeight,
-        behavior: 'smooth'
+        top: window.innerHeight, // เลื่อนลงไปยังความสูงของหน้าจอ
+        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
     });
 }
 
-// ฟังก์ชันเพื่อแสดงหรือซ่อนข้อมูลเพิ่มเติมในส่วน About Me
-function toggleAbout() {
+// ฟังก์ชันเพื่อเพิ่มหน้าใหม่
+function addPage() {
     const newPage = document.getElementById("newPage");
+    newPage.style.display = "block"; // แสดงหน้าใหม่
+}
 
-    // ตรวจสอบว่าใหม่แสดงอยู่หรือไม่
-    if (newPage.style.display === "none" || newPage.style.display === "") {
-        newPage.style.display = "block"; // แสดงหน้าใหม่
-    } else {
-        newPage.style.display = "none"; // ซ่อนหน้าใหม่
-    }
+// ฟังก์ชันเพื่อซ่อนหน้าใหม่
+function removePage() {
+    const newPage = document.getElementById("newPage");
+    newPage.style.display = "none"; // ซ่อนหน้าใหม่
 }
