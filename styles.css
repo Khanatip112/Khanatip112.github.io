@@ -7,6 +7,35 @@ body, html {
     background-color: black; /* สีพื้นหลัง */
 }
 
+.new-page {
+    display: none; /* ซ่อนหน้าที่เพิ่มใหม่ */
+}
+
+/* แอนิเมชันเลื่อนลง */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* แอนิเมชันเลื่อนขึ้น */
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+
 /* สไตล์สำหรับส่วน hero */
 .hero {
     position: relative;
