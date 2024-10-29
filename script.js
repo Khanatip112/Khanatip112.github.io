@@ -1,8 +1,15 @@
-// ฟังก์ชันเพื่อแสดงหรือซ่อนเมนู
 function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.classList.toggle("show");
+
+    // เพิ่มหรือเอาคลาสเพื่อดันเนื้อหาเมื่อเมนูเปิด
+    if (menu.classList.contains("show")) {
+        document.body.classList.add("menu-open");
+    } else {
+        document.body.classList.remove("menu-open");
+    }
 }
+
 
 // ฟังก์ชันเพื่อเลื่อนลงไปยังส่วนถัดไป
 function scrollToNext() {
