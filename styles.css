@@ -147,6 +147,8 @@ body.menu-open {
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
+    background-color: rgba(0, 0, 0, 0.8);
+     border-radius: 50%;
 }
 
 /* สไตล์สำหรับปุ่มเครื่องหมายลบ */
