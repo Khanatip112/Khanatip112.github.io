@@ -7,31 +7,16 @@ function toggleMenu() {
 // ฟังก์ชันเพื่อเลื่อนลงไปยังส่วนถัดไป
 function scrollToNext() {
     window.scrollBy({
-        top: window.innerHeight, // เลื่อนลงไปยังความสูงของหน้าจอ
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
+        top: window.innerHeight,
+        behavior: 'smooth'
     });
 }
 
 // ฟังก์ชันเพื่อแสดงหรือซ่อนข้อมูลเพิ่มเติมในส่วน About Me
-// ฟังก์ชันเพื่อแสดงหรือซ่อนข้อมูลเพิ่มเติมในส่วน About Me
 function toggleAbout() {
-    const moreInfo = document.querySelector(".more-info");
     const newPage = document.getElementById("newPage");
 
-    // แสดงหรือซ่อนข้อมูลเพิ่มเติม
-    if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
-        moreInfo.style.display = "block";  // แสดงข้อมูลเพิ่มเติม
-        newPage.style.display = "block";    // แสดงหน้าใหม่
-    } else {
-        moreInfo.style.display = "none";    // ซ่อนข้อมูลเพิ่มเติม
-        newPage.style.display = "none";      // ซ่อนหน้าใหม่
-    }
-}
-
-
-// ฟังก์ชันเพื่อแสดงหรือซ่อนหน้าใหม่
-function toggleNewPage() {
-    const newPage = document.getElementById("newPage");
+    // ตรวจสอบว่าใหม่แสดงอยู่หรือไม่
     if (newPage.style.display === "none" || newPage.style.display === "") {
         newPage.style.display = "block"; // แสดงหน้าใหม่
     } else {
