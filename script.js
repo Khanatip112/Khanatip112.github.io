@@ -3,9 +3,7 @@ function toggleMenu() {
     const menuIcon = document.querySelector('.menu-icon');
     menu.classList.toggle('show'); // เพิ่มหรือลดคลาส show
     menuIcon.classList.toggle('active'); // เพิ่มหรือลดคลาส active
-    // เพิ่มหรือลดคลาส menu-open
 }
-
 
 
 
