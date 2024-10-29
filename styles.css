@@ -23,10 +23,9 @@ body, html {
     color: #333;
 }
 
-.collapse-toggle {
-    font-size: 36px; /* ขนาดตัวอักษรที่เหมาะสม */
-    line-height: 50px; /* ทำให้ข้อความอยู่กึ่งกลางในปุ่มวงกลม */
-    text-align: center; /* จัดข้อความให้กึ่งกลางในแนวนอน */
+/* สไตล์สำหรับปุ่มเครื่องหมายบวก */
+.expand-toggle {
+    font-size: 48px; /* ขนาดตัวอักษร */
     cursor: pointer;
     color: white;
     background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
@@ -37,7 +36,6 @@ body, html {
     bottom: 20px; /* ระยะห่างจากด้านล่าง */
     left: 50%; /* กึ่งกลาง */
     transform: translateX(-50%); /* ให้อยู่กลาง */
-    z-index: 30; /* ให้แน่ใจว่ามันอยู่ด้านบนสุด */
 }
 
 
@@ -155,7 +153,9 @@ body.menu-open {
 
 /* สไตล์สำหรับปุ่มเครื่องหมายลบ */
 .collapse-toggle {
-    font-size: 48px; /* ขนาดตัวอักษร */
+    font-size: 36px; /* ขนาดตัวอักษรที่เหมาะสม */
+    line-height: 50px; /* ทำให้ข้อความอยู่กึ่งกลางในปุ่มวงกลม */
+    text-align: center; /* จัดข้อความให้กึ่งกลางในแนวนอน */
     cursor: pointer;
     color: white;
     background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
