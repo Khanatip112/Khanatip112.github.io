@@ -13,25 +13,29 @@ function scrollToNext() {
 }
 
 function addAboutMePage() {
-    document.getElementById('newAboutMePage').style.display = 'block';
-    document.getElementById('about').style.display = 'none'; // ซ่อนหน้า About Me
-    // เพิ่มแอนิเมชันที่ต้องการ
+    const newPage = document.getElementById('newAboutMePage');
+    newPage.style.display = 'block';
+    newPage.style.animation = 'slideDown 0.5s ease forwards'; // เพิ่มการเคลื่อนไหวเลื่อนลง
 }
 
 function removeAboutMePage() {
-    document.getElementById('newAboutMePage').style.display = 'none';
-    document.getElementById('about').style.display = 'block'; // แสดงหน้า About Me
-    // เพิ่มแอนิเมชันที่ต้องการ
+    const newPage = document.getElementById('newAboutMePage');
+    newPage.style.animation = 'slideUp 0.5s ease forwards'; // เพิ่มการเคลื่อนไหวเลื่อนขึ้น
+    newPage.addEventListener('animationend', function() {
+        newPage.style.display = 'none'; // ซ่อนหน้าหลังจากแอนิเมชันเสร็จสิ้น
+    });
 }
 
 function addEducationPage() {
-    document.getElementById('newEducationPage').style.display = 'block';
-    document.getElementById('education').style.display = 'none'; // ซ่อนหน้า Education
-    // เพิ่มแอนิเมชันที่ต้องการ
+    const newPage = document.getElementById('newEducationPage');
+    newPage.style.display = 'block';
+    newPage.style.animation = 'slideDown 0.5s ease forwards'; // เพิ่มการเคลื่อนไหวเลื่อนลง
 }
 
 function removeEducationPage() {
-    document.getElementById('newEducationPage').style.display = 'none';
-    document.getElementById('education').style.display = 'block'; // แสดงหน้า Education
-    // เพิ่มแอนิเมชันที่ต้องการ
+    const newPage = document.getElementById('newEducationPage');
+    newPage.style.animation = 'slideUp 0.5s ease forwards'; // เพิ่มการเคลื่อนไหวเลื่อนขึ้น
+    newPage.addEventListener('animationend', function() {
+        newPage.style.display = 'none'; // ซ่อนหน้าหลังจากแอนิเมชันเสร็จสิ้น
+    });
 }
