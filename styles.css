@@ -4,7 +4,8 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: black; /* สีพื้นหลัง */
+    background-color: black;
+    transition: transform 0.3s ease;
 }
 
 /* สไตล์สำหรับส่วน hero */
@@ -86,7 +87,7 @@ p {
 /* สไตล์สำหรับแทบสามขีด (menu-icon) */
 .menu-icon {
     position: fixed; /* ปรับจาก absolute เป็น fixed */
-    top: 20px; /* ระยะห่างจากด้านบน */
+    top: 10px; /* ระยะห่างจากด้านบน */
     left: 20px; /* ระยะห่างจากด้านซ้าย */
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     z-index: 100; /* ให้แน่ใจว่าขีดสามขีดอยู่ด้านบนของทุกองค์ประกอบ */
@@ -103,19 +104,24 @@ p {
 
 /* สไตล์สำหรับเมนูที่ซ่อนอยู่ */
 #menu {
-    display: none; /* ซ่อนเมนูโดยเริ่มต้น */
-    position: absolute;
-    top: 60px; /* ระยะห่างจากด้านบน */
-    left: 20px; /* ระยะห่างจากด้านซ้าย */
-    background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังโปร่งใส */
+    position: fixed;
+    top: 0;
+    left: -250px; /* เริ่มต้นซ่อนเมนูไว้ทางซ้าย */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px;
-    border-radius: 8px;
-    z-index: 30;
+    transition: left 0.3s ease; /* ใช้ transition เพื่อให้เมนูเลื่อนออกมาอย่างนุ่มนวล */
+    z-index: 99;
+}
+#menu.show {
+    left: 0; /* เลื่อนเมนูออกมาจากทางซ้าย */
 }
 
-#menu.show {
-    display: block; /* แสดงเมนูเมื่อมีคลาส show */
+/* เมื่อเมนูแสดง ให้ดันเนื้อหาไปทางขวา */
+body.menu-open {
+    transform: translateX(250px);
 }
 
 #menu ul {
