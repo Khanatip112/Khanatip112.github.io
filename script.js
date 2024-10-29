@@ -17,23 +17,25 @@ function addPage() {
     const newPage = document.getElementById("newPage");
     newPage.style.display = "block"; // แสดงหน้าใหม่
 
-    // เพิ่มอนิเมชั่นการเลื่อนลง
-    newPage.style.transform = "translateY(-100%)"; // เริ่มที่ตำแหน่งเหนือหน้า
-    setTimeout(() => {
-        newPage.style.transition = "transform 0.5s ease-in-out"; // ตั้งเวลาสำหรับการเปลี่ยนแปลง
-        newPage.style.transform = "translateY(0)"; // เลื่อนลงมาที่ตำแหน่งปกติ
-    }, 10); // รอสักครู่เพื่อให้การแสดงผลทำงาน
+    // เลื่อนลงไปยังหน้าใหม่
+    window.scrollBy({
+        top: window.innerHeight, // เลื่อนลงไปยังความสูงของหน้าจอ
+        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
+    });
 }
 
 // ฟังก์ชันเพื่อซ่อนหน้าใหม่
 function removePage() {
     const newPage = document.getElementById("newPage");
     
-    // เพิ่มอนิเมชั่นการเลื่อนขึ้น
-    newPage.style.transition = "transform 0.5s ease-in-out"; // ตั้งเวลาสำหรับการเปลี่ยนแปลง
-    newPage.style.transform = "translateY(-100%)"; // เลื่อนขึ้นไปเหนือหน้า
+    // เลื่อนขึ้นไปยังหน้าก่อนหน้า
+    window.scrollBy({
+        top: -window.innerHeight, // เลื่อนขึ้นไปยังความสูงของหน้าจอ
+        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
+    });
 
+    // รอ 400ms (ระยะเวลาอนิเมชั่น) แล้วซ่อนหน้าใหม่
     setTimeout(() => {
-        newPage.style.display = "none"; // ซ่อนหน้าใหม่หลังจากเลื่อนขึ้น
-    }, 500); // รอให้การเลื่อนเสร็จสิ้นก่อนซ่อน
+        newPage.style.display = "none"; // ซ่อนหน้าใหม่
+    }, 400);
 }
