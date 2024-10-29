@@ -44,15 +44,21 @@
             <h2>ABOUT ME</h2>
         </div>
         <!-- ปุ่มเครื่องหมายบวก -->
-        <div class="expand-toggle" onclick="toggleAbout()">+</div>
-
-        <!-- หน้าใหม่ที่จะแสดงเมื่อกดเครื่องหมายบวก -->
-        <div id="newPage" style="display: none; text-align: center;">
-            <h3>ข้อมูลเพิ่มเติมเกี่ยวกับฉัน</h3>
-            <p>นี่คือข้อมูลที่ซ้อนอยู่ เมื่อกดเครื่องหมายบวก!</p>
-            <button onclick="toggleAbout()">ลบหน้า</button>
+        <div class="expand-toggle" onclick="addPage()">+</div>
+        <div class="more-info">
+            <p>นี่คือข้อมูลเพิ่มเติมเกี่ยวกับตัวฉัน ที่จะถูกแสดงเมื่อกดเครื่องหมายบวก...</p>
         </div>
     </section>
+
+    <div id="newPage" style="display: none;">
+        <section class="hero">
+            <img src="ryan-lum-1ak3Z7ZmtQA-unsplash.jpg" alt="New Page Image" class="background-image">
+            <div class="hero-content">
+                <h2>นี่คือหน้าใหม่</h2>
+                <div class="collapse-toggle" onclick="removePage()">-</div>
+            </div>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
