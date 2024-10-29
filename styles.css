@@ -150,7 +150,6 @@ p {
     color: white; /* สีตัวอักษร */
 }
 
-/* สไตล์สำหรับเครื่องหมายลบ */
 .collapse-toggle {
     font-size: 48px; /* ขนาดตัวอักษร */
     cursor: pointer;
@@ -162,7 +161,8 @@ p {
     position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
     bottom: 20px; /* ระยะห่างจากด้านล่าง */
     left: 50%; /* กึ่งกลาง */
-    transform: translate(-50%); /* ให้อยู่กลาง */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
+}
 
 * {
     box-sizing: border-box;
