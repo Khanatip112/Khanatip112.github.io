@@ -15,29 +15,25 @@ function scrollToNext() {
 // ฟังก์ชันเพื่อเพิ่มหน้าใหม่
 function addPage() {
     const newPage = document.getElementById("newPage");
-    const expandToggle = document.querySelector('.expand-toggle'); // เครื่องหมายบวก
-    const collapseToggle = document.querySelector('.collapse-toggle'); // เครื่องหมายลบ
+    newPage.style.display = "block"; // แสดงหน้าใหม่
 
-    // แสดงหน้าใหม่
-    newPage.style.display = "block";
-    collapseToggle.style.display = "block"; // แสดงปุ่มลบ
-    expandToggle.style.display = "none"; // ซ่อนปุ่มบวก
-
-    // เลื่อนลงไปยังหน้าใหม่
-    window.scrollTo({
-        top: newPage.offsetTop,
-        behavior: 'smooth' // การเลื่อนแบบนุ่มนวล
-    });
+    // เพิ่มอนิเมชั่นการเลื่อนลง
+    newPage.style.transform = "translateY(-100%)";
+    setTimeout(() => {
+        newPage.style.transition = "transform 0.5s ease-in-out"; // ตั้งเวลาสำหรับการเปลี่ยนแปลง
+        newPage.style.transform = "translateY(0)";
+    }, 10); // รอสักครู่เพื่อให้การแสดงผลทำงาน
 }
 
 // ฟังก์ชันเพื่อซ่อนหน้าใหม่
 function removePage() {
     const newPage = document.getElementById("newPage");
-    const expandToggle = document.querySelector('.expand-toggle'); // เครื่องหมายบวก
-    const collapseToggle = document.querySelector('.collapse-toggle'); // เครื่องหมายลบ
+    
+    // เพิ่มอนิเมชั่นการเลื่อนขึ้น
+    newPage.style.transition = "transform 0.5s ease-in-out"; // ตั้งเวลาสำหรับการเปลี่ยนแปลง
+    newPage.style.transform = "translateY(-100%)";
 
-    // ซ่อนหน้าใหม่
-    newPage.style.display = "none"; 
-    collapseToggle.style.display = "none"; // ซ่อนปุ่มลบ
-    expandToggle.style.display = "block"; // แสดงปุ่มบวก
+    setTimeout(() => {
+        newPage.style.display = "none"; // ซ่อนหน้าใหม่หลังจากเลื่อนขึ้น
+    }, 500); // รอให้การเลื่อนเสร็จสิ้นก่อนซ่อน
 }
