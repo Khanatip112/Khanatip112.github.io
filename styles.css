@@ -14,14 +14,55 @@ body, html {
     overflow: hidden;
 }
 
+section {
+    margin: 0; /* ลบระยะห่างที่อาจมี */
+    padding: 0; /* ลบระยะห่างภายใน */
+}
+
+/* สไตล์สำหรับส่วน About Me */
+#about {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* สไตล์สำหรับปุ่มเครื่องหมายบวก */
+.expand-toggle {
+    font-size: 48px; /* ขนาดตัวอักษร */
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลัง */
+    width: 50px; /* ขนาดปุ่ม */
+    height: 50px; /* ขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    position: absolute; /* ใช้ตำแหน่งที่แน่นอน */
+    bottom: 20px; /* ระยะห่างจากด้านล่าง */
+    left: 50%; /* กึ่งกลาง */
+    transform: translateX(-50%); /* ให้อยู่กลาง */
+}
+
+/* สไตล์สำหรับเนื้อหาเพิ่มเติม */
+.more-info {
+    margin-top: 20px;
+    display: none; /* ซ่อนเนื้อหานี้โดยเริ่มต้น */
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
 /* รูปภาพพื้นหลัง */
 .background-image {
     position: absolute;
-    top: 0; /* เริ่มที่ด้านบนสุด */
-    left: 0; /* เริ่มที่ด้านซ้ายสุด */
-    width: 100%; /* ปรับให้กว้างเต็มจอ */
-    height: 100%; /* ปรับให้สูงเต็มจอ */
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* กว้างเต็มจอ */
+    height: 100vh; /* สูงเต็มจอ */
     object-fit: cover; /* ปรับขนาดให้พอดีกับพื้นที่ */
+    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
 }
 
 /* เนื้อหาในส่วน hero */
@@ -37,50 +78,6 @@ body, html {
     padding: 20px; /* เพิ่มระยะห่างรอบข้อความ */
     border-radius: 10px; /* ขอบมน */
 }
-
-
-/* สไตล์สำหรับส่วน About Me */
-#about {
-    padding: 50px;
-    text-align: center;
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-.about-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-/* สไตล์สำหรับปุ่มขยาย/ยุบ */
-.expand-toggle {
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s; /* แอนิเมชันเมื่อเปลี่ยนสีพื้นหลัง */
-}
-
-.expand-toggle:hover {
-    background-color: #555; /* สีเมื่อเลื่อนเมาส์ไปที่ปุ่ม */
-}
-
-.more-info {
-    margin-top: 20px;
-    max-height: 0; /* ซ่อนเนื้อหานี้โดยเริ่มต้น */
-    opacity: 0; /* ซ่อนเนื้อหานี้โดยเริ่มต้น */
-    overflow: hidden; /* ป้องกันการแสดงผลเนื้อหาที่เกิน */
-    transition: max-height 0.4s ease, opacity 0.4s ease; /* แอนิเมชัน */
-}
-
-.more-info.show {
-    max-height: 200px; /* ปรับขนาดตามความสูงที่ต้องการ */
-    opacity: 1; /* แสดงเนื้อหา */
-}
-
 
 h1 {
     font-size: 48px; /* ขนาดตัวอักษร */
@@ -150,8 +147,4 @@ p {
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
-}
-
-* {
-    box-sizing: border-box;
 }
