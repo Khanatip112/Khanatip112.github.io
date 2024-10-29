@@ -13,17 +13,21 @@ function scrollToNext() {
 }
 
 // ฟังก์ชันเพื่อแสดงหรือซ่อนข้อมูลเพิ่มเติมในส่วน About Me
+// ฟังก์ชันเพื่อแสดงหรือซ่อนข้อมูลเพิ่มเติมในส่วน About Me
 function toggleAbout() {
     const moreInfo = document.querySelector(".more-info");
     const newPage = document.getElementById("newPage");
+
+    // แสดงหรือซ่อนข้อมูลเพิ่มเติม
     if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
-        moreInfo.style.display = "block";
-        newPage.style.display = "block"; // แสดงหน้าใหม่
+        moreInfo.style.display = "block";  // แสดงข้อมูลเพิ่มเติม
+        newPage.style.display = "block";    // แสดงหน้าใหม่
     } else {
-        moreInfo.style.display = "none";
-        newPage.style.display = "none"; // ซ่อนหน้าใหม่
+        moreInfo.style.display = "none";    // ซ่อนข้อมูลเพิ่มเติม
+        newPage.style.display = "none";      // ซ่อนหน้าใหม่
     }
 }
+
 
 // ฟังก์ชันเพื่อแสดงหรือซ่อนหน้าใหม่
 function toggleNewPage() {
