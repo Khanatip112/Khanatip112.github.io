@@ -8,11 +8,6 @@ body, html {
     transition: transform 0.3s ease;
 }
 
-body.menu-open { /* สำหรับเมนู */
-    margin-top: 50px; /* เพิ่ม margin-top เพื่อเลื่อน section ลง */
-}
-
-
 /* สไตล์สำหรับส่วน hero */
 .hero {
     position: relative;
