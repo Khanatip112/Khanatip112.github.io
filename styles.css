@@ -37,21 +37,14 @@ body, html {
     transform: translateX(-50%); /* ให้อยู่กลาง */
 }
 
-/* สไตล์สำหรับเนื้อหาเพิ่มเติม */
-.more-info {
-    margin-top: 20px;
-    display: none; /* ซ่อนเนื้อหานี้โดยเริ่มต้น */
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-}
-
 /* หน้าใหม่ */
 #newPage {
     display: none; /* ซ่อนหน้าใหม่โดยเริ่มต้น */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งใส */
-    padding: 20px;
-    border-radius: 10px; /* ขอบมน */
-    margin-top: 20px; /* ระยะห่างด้านบน */
+    padding: 0;
+    border-radius: 0; /* ขอบมน */
+    margin-top: 0; /* ระยะห่างด้านบน */
     position: relative; /* ตั้งตำแหน่ง */
 }
 
