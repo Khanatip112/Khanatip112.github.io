@@ -14,21 +14,30 @@ body, html {
     overflow: hidden;
 }
 
-section {
-    margin: 0; /* ลบระยะห่างที่อาจมี */
-    padding: 0; /* ลบระยะห่างภายใน */
-}
-
 /* รูปภาพพื้นหลัง */
 .background-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw; /* กว้างเต็มจอ */
-    height: 100vh; /* สูงเต็มจอ */
+    top: 0; /* เริ่มที่ด้านบนสุด */
+    left: 0; /* เริ่มที่ด้านซ้ายสุด */
+    width: 100%; /* ปรับให้กว้างเต็มจอ */
+    height: 100%; /* ปรับให้สูงเต็มจอ */
     object-fit: cover; /* ปรับขนาดให้พอดีกับพื้นที่ */
-    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
 }
+
+/* เนื้อหาในส่วน hero */
+.hero-content {
+    position: absolute; /* ทำให้ข้อความอยู่เหนือรูปภาพ */
+    top: 50%; /* อยู่กลางในแนวตั้ง */
+    left: 50%; /* อยู่กลางในแนวนอน */
+    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
+    color: white; /* สีตัวอักษร */
+    text-align: center; /* จัดกลาง */
+    z-index: 20; /* ให้แน่ใจว่าข้อความอยู่ด้านบนของรูปภาพ */
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งใส */
+    padding: 20px; /* เพิ่มระยะห่างรอบข้อความ */
+    border-radius: 10px; /* ขอบมน */
+}
+
 
 /* สไตล์สำหรับส่วน About Me */
 #about {
@@ -72,20 +81,6 @@ section {
     opacity: 1; /* แสดงเนื้อหา */
 }
 
-
-/* เนื้อหาในส่วน hero */
-.hero-content {
-    position: absolute; /* ทำให้ข้อความอยู่เหนือรูปภาพ */
-    top: 50%; /* อยู่กลางในแนวตั้ง */
-    left: 50%; /* อยู่กลางในแนวนอน */
-    transform: translate(-50%, -50%); /* ให้อยู่กลาง */
-    color: white; /* สีตัวอักษร */
-    text-align: center; /* จัดกลาง */
-    z-index: 20; /* ให้แน่ใจว่าข้อความอยู่ด้านบนของรูปภาพ */
-    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งใส */
-    padding: 20px; /* เพิ่มระยะห่างรอบข้อความ */
-    border-radius: 10px; /* ขอบมน */
-}
 
 h1 {
     font-size: 48px; /* ขนาดตัวอักษร */
@@ -155,4 +150,8 @@ p {
     cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
     font-size: 24px; /* ขนาดตัวอักษร */
     color: white; /* สีตัวอักษร */
+}
+
+* {
+    box-sizing: border-box;
 }
