@@ -137,6 +137,9 @@ p {
 }
 
 .collapse-toggle {
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดกลางในแนวนอน */
+    align-items: center; /* จัดกลางในแนวตั้ง */
     font-size: 48px; /* ขนาดตัวอักษร */
     cursor: pointer;
     color: white;
@@ -149,7 +152,9 @@ p {
     left: 50%; /* กึ่งกลาง */
     transform: translateX(-50%); /* ให้อยู่กลาง */
     z-index: 30; /* ให้แน่ใจว่ามันอยู่ด้านบนสุด */
+    text-align: center; /* จัดกลางข้อความ */
 }
+
 
 * {
     box-sizing: border-box;
