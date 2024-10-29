@@ -15,7 +15,7 @@ body, html {
 }
 
 /* สไตล์สำหรับส่วน About Me และ Education */
-#about, #education {
+#about, #education, #skill, #contact {
     padding: 50px;
     text-align: center;
     background-color: #f8f8f8;
